@@ -1,11 +1,27 @@
+/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FADADD;
+    background-color: #87CEEB; /* Bleu ciel */
     color: #4A4A4A;
     text-align: center;
     margin: 0;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur complète de l'écran */
 }
+
+/* Conteneur principal centré */
+.container {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+}
+/* Champs de saisie et boutons */
 input, button {
     padding: 10px;
     margin: 10px;
@@ -13,40 +29,68 @@ input, button {
     border-radius: 5px;
     font-size: 16px;
 }
+
 input {
     width: 200px;
+    border: 1px solid #4A4A4A;
+    outline: none;
 }
+
 button {
     background-color: #2C3E50;
-    color: #306498;
+    color: #FFFFFF;
     cursor: pointer;
+    transition: background0.3s ease;
 }
+
 button:hover {
     background-color: #A3C1D1;
+    color: #2C3E50;
 }
+
+/* Section des participants */
 #participants {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
+
+/* Style des vidéos */
 video {
     width: 300px;
     margin: 10px;
     border-radius: 10px;
     border: 2px solid #2C3E50;
 }
-div {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin: 20px auto;
-}
+
+/* Style des images centrées */
 .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
+
 .image-container img {
     width: 300px;
     border-radius: 10px;
+    border: 2px solid #2C3E50;
 }
+
+/* Style pour chaque élément de participant */
+.participant {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    video, .image-container img {
+        width: 100%;
+        max-width: 300px;}
+    }
